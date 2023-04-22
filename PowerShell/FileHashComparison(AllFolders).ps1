@@ -1,7 +1,7 @@
-﻿ #Get-ChildItem $DestinationDirectory -Directory -Exclude 'usss_closed_special_cases', 'Usss_closed_fact_finder_cases'|Format-Table
-$Directory = "E:"
 
-$DestinationDirectory = "E:"
+$Directory = "E:" #<-- Enter the source storage location here.
+
+$DestinationDirectory = "E:" # <-- Enter Destination storage location here.
 
 $SourceStorageFiles = "Source storage files"
 $DestinationStorageFiles = "Destination storage files"
@@ -9,7 +9,7 @@ $SourceStorageFolders = "Source Storage folders"
 $DestinationStorageFolders = "Destination storage folders"
 
 $Compare = {
-Start-Transcript -OutputDirectory "C:\users\jsanc\downloads" -IncludeInvocationHeader -Verbose #<-- where "C:\users\sanchezj\desktop\Everything" enter location where you want transcript file to be stored.
+Start-Transcript -OutputDirectory "C:\users\jsanc\downloads" -IncludeInvocationHeader -Verbose #<-- where "C:\users\jsanc\downloads" enter location where you want transcript file to be stored.
 
 Write-Host "=============File Hash Comparison========================"
 
@@ -20,13 +20,13 @@ Get-ChildItem -recurse -Path $Directory | foreach {Get-FileHash -Path $_.FullNam
 
 }
 
- & $Compare | write-Output | Tee-Object -FilePath "C:\users\jsanc\downloads\Demo.csv" -Verbose #<-- where "C:\users\sanchezj\desktop\Everything" is enter storage location where you want csv file to be stored.
+ & $Compare | write-Output | Tee-Object -FilePath "C:\users\jsanc\downloads\Demo.csv" -Verbose #<-- where "C:\users\jsanc\downloads\Demo.csv" is enter storage location where you want csv file to be stored.
 
 
 $Timer = {
 Write-Host "File Hash Comparison Complete."
 $prompt = New-Object -ComObject wscript.shell
-$message = $prompt.popup("File Hash comparison complete", 10)
+$message = $prompt.popup("File Hash comparison complete", 10) #<-- The popup message box will automatically disappear after 10 seconds.
 }
 & $Timer
 
@@ -46,7 +46,7 @@ Write-Host $DestinationStorageFiles (dir $DestinationDirectory -File -Recurse | 
 $Timer = {
 Write-Host "Files and folder Count Complete."
 $prompt = New-Object -ComObject wscript.shell
-$message = $prompt.popup("File and folder count complete", 10)
+$message = $prompt.popup("File and folder count complete", 10) #<-- The popup message box will automatically disappear after 10 seconds.
 }
 & $Timer
 
