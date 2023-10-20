@@ -1,1 +1,3 @@
-
+The "Automation Framework Templates" folder is a folder that will hold a series of frameworks I have developed. With these frameworks that I have built, users can use these templates to help automate their work productivity.
+Users also have the ability to add their own folder paths (e.g. C:\users\Mickey\Documents) into the script without having to make several changes to the script's framework.
+This folder is designed to have pre-built frameworks that allow users to make minimal changes by using a "plug-n-play" approach. 
