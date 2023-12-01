@@ -23,12 +23,12 @@ cd $createRootFolder
 # Same goes for "". For example, at the "cd" command, the word deliverable that is in qoutes, can be changed another name.
 # when its name is changed, the new name becomes that folder.]
 
-$SubFolder = {@( mkdir "Audit Plan", "Data Calls","Deliverable", "Design Matrix", "Entrance Conference Documents", "False Positive", "Fieldwork", "ROE", "System Assets") #<--- To create folders: Just add the name and have it in qoutes (eg. "DAS", "CRA", 'OIG', 'Feild work'). 
+$SubFolder = {@( mkdir "Plan", "Data Calls","Deliverable", "Design Matrix", "Entrance Conference Documents", "False Positive", "Fieldwork", "ROE", "System Assets") #<--- To create folders: Just add the name and have it in qoutes (eg. "DAS", "CRA", 'OIG', 'Feild work'). 
 #If multiple folders make sure to add comma between each word that are in qoutes
 }
 & $SubFolder
 cd "Deliverable" # <---- ** Note: At the beginning of this path, add the storage location before "$Folder" of where you want to folders to be stored (if storage location is different). Need to do this for every section of where it has "cd" command; starting from line 37 and forward.
-$Subfolder = {@(mkdir "Nessus Audit Policies", "PSSC Completed - For Jason's Review", "PSSC Needed", "RAW Assessment Results")
+$Subfolder = {@(mkdir "Audit Policies", "PSSC Completed - For Review", "PSSC Needed", "RAW Assessment Results")
 }
 & $Subfolder 
  cd "PSSC Needed" 
@@ -37,10 +37,10 @@ $Archive = {
 }
 & $Archive
 
-$Subfolder1 = {@(mkdir "ICE Nessus Export", "OIG Nessus Export", "SteathAUDIT Data")
+$Subfolder1 = {@(mkdir "Export", "Exports", "Data")
 }
 & $Subfolder1
-cd "ICE Nessus Export"
+cd "file export"
 $Archive = {
 @(mkdir "Archive")
 }
