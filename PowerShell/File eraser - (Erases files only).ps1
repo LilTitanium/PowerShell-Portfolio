@@ -18,7 +18,7 @@ function Test-Admin {
 
 cd C:\Users\Public\Documents\StealthAudit
 Get-ChildItem -Path "C:\Users\Public\Documents" -Include *.* 
-if ("C:\Users\Public\Documents\StealthAudit") {
+if ("C:\Users\Public\Documents\Audit") {
 #Remove-Item "C:\Users\Public\Documents\SteathAudit" -Recurse | foreach { $_.Delete()}
 Get-ChildItem -Recurse -File | Remove-Item
 }
